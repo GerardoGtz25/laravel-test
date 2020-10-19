@@ -94,7 +94,7 @@ class PostControllerTest extends TestCase
     public function test_index()
     {
         $user = factory(User::class)->create();
-        
+
         factory(Post::class, 5)->create();
 
         $response = $this->actingAs($user, 'api')->json('GET', '/api/posts');
